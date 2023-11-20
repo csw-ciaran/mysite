@@ -4,7 +4,7 @@ from statistics import mean
 import hfpy_utils
 
 
-FOLDER = "swimdata/"
+FOLDER = "/home/beams/Documents/Python/CA2-CD/swimdata/"
 
 
 def convert2hundreths(timestring):
@@ -42,6 +42,9 @@ def get_swimmers_data(filename):
     average = build_time_string(mean(converts))
 
     return name, age, distance, stroke, times, converts, average
+
+
+print(get_swimmers_data("Abi-10-50m-Back.txt"))
 
 
 def produce_bar_chart(fn):

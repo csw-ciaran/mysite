@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <form method="POST" action="/events">
+        <label for="file">Choose a file:</label>
+
+        <select name="file" id="file">
+
+            {% for file in files %}
+
+                <option value="{{ file }}">{{ file }}</option>
+
+            {% endfor %}
+
+        </select>
+        <p>
+            <input type="submit" value="Select">
+        </p>
+    </form>
+
+{% endblock %}
